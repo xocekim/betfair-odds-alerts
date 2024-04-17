@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Select event</h1>
+<select hx-trigger="change" hx-get="/moo" name="eventType">
+    {% for k, v in event_types.items() %}
+    <option value="{{ v }}">{{ k }}</option>
+    {% endfor %}
+</select>
+{% endblock %}
